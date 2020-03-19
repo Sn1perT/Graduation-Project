@@ -1,7 +1,23 @@
 <?php
 require_once('../waf/waf.php');
-
+function writeFile($data,$type='a'){
+    $filename = date("Ymd").".log";
+    $handle =@ fopen($filename, $type);
+    flock($handle, LOCK_EX);
+    ob_start();
+    echo (date('Y-m-d H:i:s') . "\n");
+    print_r ($data);
+    echo "\n";
+    $string = ob_get_contents();
+    ob_end_clean();
+    $fettle = @fwrite($handle, $string);
+    fclose($handle);
+    @chmod($filename,0777);
+    }
+$log = $_SERVER["REMOTE_ADDR"].'   http://'.$_SERVER['SERVER_NAME'].':'.$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"]; 
+writeFile($log);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
