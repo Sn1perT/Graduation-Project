@@ -43,5 +43,19 @@
             <p><a href="/login/changepass.php">更改密码</a></p>
         </div>
     </div>
+    <div class="home">
+        <div id="now1" style="background: #20335d80; width:700px;height: 432px;margin:0px;position: absolute;top: 50px;bottom: 0px;left: 376px;color: snow;text-align: center;">
+            <p>显示实时所有payload信息</p>
+        </div>
+        <div id="now2" style="background: #20335d80; width:700px;height: 432px;margin:0px;position: absolute;top: 506px;bottom: 0px;left: 376px;color: snow;text-align: center;">
+            <p>显示实时危险payload信息</p>
+        </div>
+        <div id="now3" style="background: #20335d80; width:700px;height: 432px;margin:0px;position: absolute;top: 50px;bottom: 0px;right: 120px;color: snow;text-align: center;">
+            <p>显示实时危险ip信息</p>
+        </div>
+        <div id="now4" style="background: #20335d80; width:700px;height: 432px;margin:0px;position: absolute;top: 506px;bottom: 0px;right: 120px;color: snow;text-align: center;">
+            <p>显示当前在线用户</p>
+        </div>
+    </div>
 </body>
 </html>
